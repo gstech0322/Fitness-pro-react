@@ -1,0 +1,65 @@
+@import ../../styles/helpers
+
+.head
+    margin-bottom: 80px
+    text-align: center
+
+.title
+    margin-bottom: 20px
+
+.info
+    max-width: 455px
+    margin: 0 auto
+    color: $neutrals3
+    +d
+        max-width: 100%
+        color: $neutrals4
+    +dark
+        color: $neutrals5
+
+.list
+    display: flex
+    margin: 0 -12px
+    +t
+        margin: 0 -40px
+        overflow: auto
+        overflow-x: auto 
+        -ms-overflow-style: none
+        scrollbar-width: none
+        -webkit-overflow-scrolling: touch
+        &::-webkit-scrollbar
+            display: none 
+        &:before,
+        &:after
+            content: ""
+            flex-shrink: 0
+            width: 40px
+            height: 1px
+
+.item
+    flex: 0 0 calc(33.333% - 24px)
+    width: calc(33.333% - 24px)
+    margin: 0 12px
+    padding: 0 32px
+    text-align: center
+    +t
+        flex: 0 0 280px
+        margin: 0
+        padding: 0
+    +m
+        flex: 0 0 260px
+    &:not(:last-child)
+        +t
+            margin-right: 32px
+        +m
+            margin-right: 8px
+
+.preview
+    height: 204px
+    margin-bottom: 36px
+    img
+        max-height: 100%
+
+.subtitle
+    +body-2
+    

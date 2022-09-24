@@ -1,0 +1,213 @@
+@import ../../../styles/helpers
+
+.head
+    display: flex
+    justify-content: space-between
+    margin-bottom: 32px
+    +m
+        display: block
+        margin-bottom: 20px
+
+.title
+    padding-top: 8px
+    +body-1
+    +m
+        display: none
+
+.search
+    position: relative
+    flex-shrink: 0
+    width: 320px
+    margin-left: 30px
+    +t
+        width: 260px
+    +m
+        width: 100%
+        margin: 0
+
+.input
+    width: 100%
+    height: 48px
+    padding: 0 48px 0 14px
+    border-radius: 24px
+    background: none
+    border: 2px solid $neutrals6
+    +poppins
+    +caption-1
+    color: $neutrals2
+    transition: border-color .2s
+    +dark
+        border-color: $neutrals3
+        color: $neutrals8
+    +placeholder
+        color: $neutrals4
+    &:focus
+        border-color: $neutrals4
+
+.result
+    position: absolute
+    top: 8px
+    right: 8px
+    bottom: 8px
+    width: 32px
+    height: 32px
+    border-radius: 50%
+    background: $red
+    transition: background .2s
+    svg
+        fill: $neutrals8
+    &:hover
+        background: darken($red, 10)
+
+.wrap
+    margin-bottom: 80px
+    padding-top: 32px
+    border-top: 1px solid $neutrals6
+    +t
+        margin-bottom: 64px
+    +m
+        margin-bottom: 32px
+        padding-top: 0
+        border: none
+    +dark
+        border-color: $neutrals3
+    
+.top
+    position: relative
+    display: flex
+    justify-content: space-between
+    margin-bottom: 32px
+    padding-bottom: 32px
+    border-bottom: 1px solid $neutrals6
+    +m
+        display: block
+        margin-bottom: 20px
+        padding-bottom: 0
+        border: none
+    +dark
+        border-color: $neutrals3
+    .dropdown
+        width: 180px
+        +t
+            width: 260px
+        +m
+            width: 100%
+            margin-bottom: 20px
+
+.nav
+    position: absolute
+    top: 10px
+    left: 50%
+    display: flex
+    justify-content: center
+    transform: translateX(-50%)
+    +t
+        display: none
+
+.link
+    margin: 0 6px
+    padding: 6px 12px
+    border-radius: 14px
+    background: none
+    +button-2
+    color: $neutrals4
+    transition: all .2s
+    &:hover
+        color: $neutrals3
+        +dark
+            color: $neutrals6
+    &.active
+        background: $neutrals3
+        color: $neutrals8
+        +dark
+            background: $neutrals8
+            color: $neutrals2
+
+.filter
+    position: relative
+    display: flex
+    justify-content: center
+    padding: 0 0 0 24px
+    flex-shrink: 0
+    border-radius: 24px
+    background: $red
+    +sf-pro-display
+    font-size: 16px
+    line-height: 48px
+    color: $neutrals8
+
+.close
+    width: 52px
+    padding-right: 10px
+    background: none
+    font-size: 0
+    svg
+        fill: $neutrals8
+        transition: transform .2s
+    &:hover
+        svg
+            transform: rotate(90deg)
+
+.sorting
+    display: flex
+    flex-wrap: wrap
+    margin: -32px -16px 0
+    +d
+        margin: -24px -8px 0
+    +t
+        margin: -32px -16px 0
+    +m
+        display: block
+        margin: 0
+
+.cell
+    flex: 0 0 calc(25% - 32px)
+    max-width: calc(25% - 32px)
+    margin: 32px 16px 0
+    +d
+        flex: 0 0 calc(25% - 16px)
+        max-width: calc(25% - 16px)
+        margin: 24px 8px 0
+    +t
+        flex: 0 0 calc(50% - 32px)
+        max-width: calc(50% - 32px)
+        margin: 32px 16px 0
+    +m
+        max-width: 100%
+        margin: 0
+        &:not(:last-child)
+            margin-bottom: 20px
+
+.label
+    margin-bottom: 12px
+    +hairline-2
+    color: $neutrals5
+
+.list
+    display: flex
+    flex-wrap: wrap
+    margin: -32px -16px 0
+    +m
+        display: block
+        margin: 0
+
+.card
+    flex: 0 0 calc(33.333% - 32px)
+    max-width: calc(33.333% - 32px)
+    margin: 32px 16px 0
+    +r(1260)
+        flex: 0 0 calc(50% - 32px)
+        max-width: calc(50% - 32px)
+    +m
+        max-width: 100%
+        margin: 0
+        &:not(:last-child)
+            margin-bottom: 32px
+
+.btns
+    margin-top: 80px
+    text-align: center
+    +d
+        margin-top: 64px
+    +m
+        margin-top: 32px

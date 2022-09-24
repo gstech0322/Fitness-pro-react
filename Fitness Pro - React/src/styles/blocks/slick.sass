@@ -1,0 +1,341 @@
+.slick-slider
+    position: relative
+    display: block
+    box-sizing: border-box
+    -webkit-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+    user-select: none
+    -webkit-touch-callout: none
+    -khtml-user-select: none
+    -ms-touch-action: pan-y
+    touch-action: pan-y
+    -webkit-tap-highlight-color: transparent
+
+.slick-list
+    position: relative
+    display: block
+    overflow: hidden
+    margin: 0
+    padding: 0
+
+    &:focus
+        outline: none
+
+    &.dragging
+        cursor: pointer
+        cursor: hand
+
+.slick-slider
+    .slick-track, .slick-list
+        -webkit-transform: translate3d(0, 0, 0)
+        -moz-transform: translate3d(0, 0, 0)
+        -ms-transform: translate3d(0, 0, 0)
+        -o-transform: translate3d(0, 0, 0)
+        transform: translate3d(0, 0, 0)
+
+.slick-track
+    position: relative
+    top: 0
+    left: 0
+    display: block
+    margin-left: auto
+    margin-right: auto
+
+    &:before
+        display: table
+        content: ''
+
+    &:after
+        display: table
+        content: ''
+        clear: both
+
+.slick-loading .slick-track
+    visibility: hidden
+
+.slick-slide
+    display: none
+    float: left
+    height: 100%
+    min-height: 1px
+
+[dir='rtl'] .slick-slide
+    float: right
+
+.slick-slide
+    img
+        display: block
+
+    &.slick-loading img
+        display: none
+
+    &.dragging img
+        pointer-events: none
+
+.slick-initialized .slick-slide
+    display: block
+
+.slick-loading .slick-slide
+    visibility: hidden
+
+.slick-vertical .slick-slide
+    display: block
+    height: auto
+    border: 1px solid transparent
+
+.slick-arrow.slick-hidden
+    display: none
+
+.slick-arrow
+    position: absolute
+    z-index: 2
+    width: 24px
+    height: 24px
+    background: none
+    font-size: 0
+    transition: opacity .2s
+    svg
+        position: relative
+        z-index: 2
+        fill: $neutrals4
+        transition: fill .2s
+        +dark-common
+            fill: $neutrals6
+    &:hover
+        svg
+            fill: $neutrals2
+            +dark-common
+                fill: $neutrals8
+    &.slick-disabled
+        svg
+            fill: $neutrals5
+            +dark-common
+                fill: $neutrals4
+
+// review slider
+.review-slider
+    padding-bottom: 70px
+    +m
+        padding-bottom: 64px
+    .slick-slide
+        padding: 0 12px
+    .slick-arrow
+        bottom: 0
+    .slick-prev
+        left: calc(50% - 34px)
+    .slick-next
+        right: calc(50% - 34px)
+
+// comment slider
+.comment-slider
+    position: static
+    .slick-slide
+        padding: 0 16px
+        opacity: 0
+        transition: opacity .4s
+        &.slick-active
+            opacity: 1
+    .slick-arrow
+        top: 0
+        +m
+            top: auto
+            bottom: 0
+    .slick-prev
+        left: 0
+        +m
+            left: calc(50% - 34px)
+    .slick-next
+        left: 44px
+        +m
+            left: auto
+            right: calc(50% - 34px)
+
+// history slider
+.history-slider
+    .slick-list
+        overflow: visible
+    .slick-slide
+        opacity: 0
+        transition: opacity .4s
+        &.slick-active
+            opacity: 1
+    .slick-dots
+        position: absolute
+        left: 0
+        bottom: 47px
+        display: flex !important
+        justify-content: center
+        width: 50%
+        font-size: 0
+        +m
+            top: 176px
+            bottom: auto
+            width: 100%
+        li
+            button
+                position: relative
+                width: 8px
+                height: 8px
+                background: none
+                font-size: 0
+                &:before
+                    content: ""
+                    position: absolute
+                    top: 0
+                    left: 0
+                    right: 0
+                    bottom: 0
+                    background: $neutrals8 
+                    border-radius: 50%
+                    opacity: .7
+                    transform: scale(.5)
+                    transition: all .2s
+                &:hover
+                    &:before
+                        opacity: 1
+            &.slick-active
+                button
+                    &:before
+                        opacity: 1
+                        transform: scale(1)
+            &:not(:last-child)
+                margin-right: 8px
+
+// programs slider
+.programs-slider
+    padding-bottom: 104px
+    +d
+        padding-bottom: 88px
+    +m
+        padding-bottom: 64px
+    .slick-list
+        overflow: visible
+    .slick-track
+        display: flex
+    .slick-slide
+        height: auto
+        padding: 0 12px
+        opacity: 0
+        transition: opacity .4s
+        &.slick-active
+            opacity: 1
+        & > div
+            display: flex
+            height: 100%
+            flex-grow: 1
+    .slick-arrow
+        bottom: 0
+    .slick-prev
+        left: calc(50% - 34px)
+    .slick-next
+        right: calc(50% - 34px)
+    
+// workout slider
+.workout-slider
+    .slick-list
+        font-size: 0
+    .slick-slide
+        padding: 0 10px
+    .slick-dots
+        display: flex !important
+        justify-content: center
+        margin-top: 32px
+        font-size: 0
+        li
+            button
+                position: relative
+                width: 8px
+                height: 8px
+                background: none
+                border: 1px solid $neutrals4
+                border-radius: 50%
+                font-size: 0
+                transition: all .2s
+                &:hover
+                    border-color: $red
+            &.slick-active
+                button
+                    background: $red
+                    border-color: $red
+            &:not(:last-child)
+                margin-right: 12px
+            
+// interesting slider
+.interesting-slider
+    position: static
+    +m
+        position: relative
+        padding-top: 72px
+    .slick-list
+        overflow: visible
+    .slick-track
+        display: flex
+    .slick-slide
+        height: auto
+        padding: 0 16px
+        opacity: 0
+        transition: opacity .4s
+        &.slick-active
+            opacity: 1
+        & > div
+            display: flex
+            height: 100%
+            flex-grow: 1
+    .slick-arrow
+        top: 16px
+        +m
+            top: 0
+    .slick-prev
+        right: 44px
+        +m
+            right: auto
+            left: calc(50% - 34px)
+    .slick-next
+        right: 0
+        +m
+            right: calc(50% - 34px)
+    
+// trainer slider
+.trainer-slider
+    padding-bottom: 50px
+    .slick-list
+        padding-top: 3px
+    .slick-slide
+        padding: 0 16px
+        opacity: 0
+        transition: opacity .4s
+        &.slick-active
+            opacity: 1
+    .slick-arrow
+        bottom: -32px
+    .slick-prev
+        left: 16px
+    .slick-next
+        left: 60px
+
+// team slider
+.team-slider
+    .slick-list
+        +s
+            margin: 0 -192px 0 -8px
+    .slick-slide
+        padding: 0 8px
+    .slick-arrow
+        bottom: 0
+    .slick-prev
+        left: calc(50% - 34px)
+    .slick-next
+        right: calc(50% - 34px)
+
+// lifestyle slider
+.lifestyle-slider
+    padding-bottom: 70px
+    .slick-slide
+        padding: 0 12px
+    .slick-arrow
+        bottom: 0
+    .slick-prev
+        left: 12px
+    .slick-next
+        left: 56px

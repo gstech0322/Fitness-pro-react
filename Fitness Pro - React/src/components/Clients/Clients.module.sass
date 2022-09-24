@@ -1,0 +1,41 @@
+@import ../../styles/helpers
+
+.title
+    margin-bottom: 40px
+    text-align: center
+    font-weight: 600
+
+.list
+    display: flex
+    margin: 0 -12px
+    +d
+        margin: 0 -8px
+    +m
+        margin: 0 -32px
+        overflow: auto
+        overflow-x: auto 
+        -ms-overflow-style: none
+        scrollbar-width: none
+        -webkit-overflow-scrolling: touch
+        &::-webkit-scrollbar
+            display: none 
+        &:before,
+        &:after
+            content: ""
+            flex-shrink: 0
+            width: 32px
+            height: 1px
+
+.logo
+    flex: 1
+    margin: 0 12px
+    +d
+        margin: 0 8px
+    +m
+        flex: 0 0 140px
+        margin: 0
+    img
+        width: 100%
+    &:not(:last-child)
+        +m
+            margin-right: 16px

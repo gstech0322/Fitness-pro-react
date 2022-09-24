@@ -1,0 +1,211 @@
+@import ../../styles/helpers
+
+.header
+    position: relative
+    z-index: 10
+    padding: 48px 0
+    +m
+        padding-bottom: 24px
+
+.container
+    display: flex
+    align-items: center
+    & > .button
+        +m
+            display: none
+
+.logo
+    margin-right: 48px
+    +d
+        margin-right: auto
+
+.wrap
+    display: flex
+    align-items: center
+    flex-grow: 1
+    padding-left: 48px
+    border-left: 1px solid $neutrals6
+    +x
+        padding-left: 0
+        border: none
+    +d
+        display: none
+        position: absolute
+        top: 100%
+        left: 0
+        right: 0
+        align-items: flex-start
+        padding: 0 80px 80px
+        background: $neutrals8
+        box-shadow: 0px 64px 64px 0 rgba(15, 15, 15, 0.1)
+        &.active
+            display: flex
+    +t
+        padding: 0 40px 64px
+    +m
+        flex-direction: column
+        align-items: flex-start
+        min-height: calc(100vh - 104px)
+        padding: 48px 32px 44px
+    +dark
+        border-color: $neutrals3
+        +d
+            background: $neutrals1
+    .button
+        display: none
+        +m
+            display: inline-flex
+            margin-top: 48px
+
+.nav
+    display: flex
+    align-items: center
+    margin-right: 20px
+    +d
+        flex-direction: column
+        align-items: flex-start
+        flex: 0 0 calc(100% - 416px)
+        max-width: calc(100% - 416px)
+        margin-right: 0
+    +t
+        flex: 0 0 calc(100% - 344px)
+        max-width: calc(100% - 344px)
+    +m
+        align-items: stretch
+        flex: auto 0 calc(100% + 64px)
+        width: calc(100% + 64px)
+        max-width: calc(100% + 64px)
+        margin: 0 -32px auto
+
+.link,
+.group,
+.nav > div
+    &:not(:last-child)
+        margin-right: 32px
+        +x
+            margin-right: 24px
+        +d
+            margin: 0 0 48px
+        +m
+            margin: 0
+
+.link
+    display: block
+    padding: 16px 8px
+    +button-2
+    color: $neutrals4
+    transition: color .2s
+    +d
+        padding: 0
+        font-size: 40px
+        line-height: 1.2
+        letter-spacing: -.01em
+    +t
+        font-size: 32px
+    +m
+        padding: 18px 32px 
+        font-size: 24px
+    &:hover
+        color: $neutrals2
+        +dark
+            color: $neutrals8
+    &.active
+        color: $neutrals2
+        +m
+            box-shadow: inset 2px 0 0 0 $red
+        +dark
+            color: $neutrals8
+    
+.details
+    display: flex
+    align-items: center
+    flex-grow: 1
+    +d
+        display: block
+        flex: 0 0 416px
+    +t
+        flex: 0 0 344px
+    +m
+        flex: 0 0 auto
+
+
+.contact
+    display: none
+    +d
+        display: block
+        margin-bottom: 32px
+    +m
+        display: none
+
+.element
+    &:not(:last-child)
+        margin-bottom: 32px
+        +t
+            margin-bottom: 24px
+
+.category
+    margin-bottom: 8px
+    +body-1
+    +t
+        margin-bottom: 4px
+        font-size: 18px
+
+.text
+    +caption-1
+    color: $neutrals4
+
+.socials
+    display: flex
+    margin: 0 auto
+    +m
+        display: none
+
+.social
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-shrink: 0
+    width: 24px
+    height: 24px
+    svg
+        fill: $neutrals4
+        transition: fill .2s
+    &:hover svg
+        fill: $neutrals2
+        +dark
+            fill: $neutrals8
+    &:not(:last-child)
+        margin-right: 24px
+
+.burger
+    display: none
+    +d
+        display: block
+        position: relative
+        margin-left: 40px
+        width: 32px
+        height: 32px
+        background: none
+        -webkit-tap-highlight-color: rgba(0,0,0,0)
+        &.active
+            &:before
+                transform: translateY(0) rotate(-45deg)
+            &:after
+                transform: translateY(0) rotate(45deg)
+        &:before,
+        &:after
+            content: ''
+            position: absolute
+            top: 16px
+            left: 6px
+            width: 20px
+            height: 2px
+            background: $neutrals4
+            border-radius: 2px
+            transition: transform .2s
+        &:before
+            transform: translateY(-4px)
+        &:after
+            transform: translateY(3px)
+    +t
+        margin-left: 32px

@@ -1,0 +1,62 @@
+@import ../../../styles/helpers
+
+.top
+    margin-bottom: 80px
+    text-align: center
+    +m
+        margin-bottom: 48px
+
+.title
+    margin-bottom: 20px
+
+.info
+    max-width: 650px
+    margin: 0 auto 80px
+    color: $neutrals3
+    +m
+        margin-bottom: 48px
+    +dark
+        color: $neutrals6
+    a
+        font-weight: 600
+        color: $red
+        transition: opacity .2s
+        &:hover
+            opacity: .8
+
+.nav
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    margin: -12px -6px 0
+    +m
+        display: none
+
+.btn
+    margin: 12px 6px 0
+    padding: 6px 12px
+    border-radius: 14px
+    background: none
+    +button-2
+    color: $neutrals4
+    transition: all .2s
+    -webkit-tap-highlight-color: rgba(0,0,0,0)
+    &:hover
+        color: $neutrals3
+        +dark
+            color: $neutrals8
+    &.active
+        background: $neutrals3
+        color: $neutrals8
+        +dark
+            background: $neutrals8
+            color: $neutrals2
+
+.dropdown
+    display: none
+    text-align: left
+    +m
+        display: block
+
+.list
+    margin-bottom: -32px

@@ -1,0 +1,112 @@
+@import ../../../styles/helpers
+
+.title
+    margin-bottom: 40px
+    +m
+        text-align: center
+
+.list
+    display: flex
+    flex-wrap: wrap
+    margin: 0 -16px
+    border-width: 2px 0 1px
+    border-style: solid
+    border-color: $neutrals6
+    +t
+        display: block
+        margin: 0
+        padding: 48px 0
+    +m
+        padding: 0
+        border: none
+    +dark
+        border-color: $neutrals3
+
+.item
+    display: flex
+    align-items: center
+    flex: 0 0 calc(50% - 32px)
+    width: calc(50% - 32px)
+    margin: 80px 16px -1px
+    padding-bottom: 48px
+    border-bottom: 1px solid $neutrals6
+    cursor: pointer
+    +x
+        cursor: default 
+    +t
+        width: 100%
+        margin: 0
+        padding: 0
+        border: none
+    +m
+        display: block
+        text-align: center
+    +dark
+        border-color: $neutrals3
+    &:not(:last-child)
+        +t
+            margin-bottom: 48px
+        +m
+            margin-bottom: 40px
+    .button
+        position: absolute
+        top: calc(100% + 24px)
+        left: 0
+        visibility: hidden
+        opacity: 0
+        +x
+            position: static
+            margin-top: 24px
+            visibility: visible
+            opacity: 1
+        +m
+            margin-top: 16px
+    &:hover 
+        .details
+            transform: translateY(-33px)
+            +x
+                transform: translateY(0)
+        .button
+            visibility: visible
+            opacity: 1
+
+.preview
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-shrink: 0
+    width: 160px
+    height: 160px
+    margin-right: 32px
+    border-radius: 24px
+    +m
+        margin: 0 auto 16px
+    img
+        max-width: 40px
+
+.details
+    position: relative
+    transition: transform .2s
+
+.status
+    margin-bottom: 12px
+    +m
+        line-height: 22px
+
+.subtitle
+    margin-bottom: 4px
+    +body-2
+
+.description
+    +caption-1
+    color: $neutrals4
+
+.btns
+    margin-top: 80px
+    text-align: center
+    +t
+        margin-top: 64px
+    +m
+        margin-top: 48px
+
+

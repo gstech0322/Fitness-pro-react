@@ -1,0 +1,242 @@
+@import ../../../styles/helpers
+
+.section
+    padding: 40px 0 124px
+    +m
+        padding-bottom: 64px
+
+.top
+    max-width: 670px
+    margin: 0 auto 102px
+    text-align: center
+    +m
+        margin-bottom: 64px
+    .status
+        margin-bottom: 16px
+
+.title
+    margin-bottom: 8px
+
+.info
+    +body-1
+    color: $neutrals4
+
+.gallery
+    position: relative
+    left: -5%
+    max-width: 512px
+    margin: 0 auto 108px
+    pointer-events: none
+    +d
+        max-width: 400px
+    +m
+        margin-bottom: 64px
+    +s
+        left: -11%
+        max-width: 280px
+
+.preview
+    &:first-child
+        position: relative
+        z-index: 2
+    &:nth-child(2)
+        top: 35.5%
+        right: -19%
+        z-index: 3
+        width: 45%
+    &:nth-child(3)
+        top: -12%
+        right: -6%
+        z-index: 1
+        width: 43%
+    &:nth-child(4)
+        left: 11%
+        bottom: 14%
+        z-index: 3
+        width: 18%
+    &:not(:first-child)
+        position: absolute
+    img
+        width: 100%
+    
+.row
+    display: flex
+    align-items: flex-start
+    +t
+        display: block
+
+.trainer
+    flex: 0 0 256px
+    padding: 24px
+    border-radius: 24px
+    border: 1px solid $neutrals6
+    text-align: center
+    +d
+        flex: 0 0 220px
+    +t
+        margin-bottom: 32px
+    +dark
+        background: $neutrals2
+        border-color: $neutrals3
+    .status
+        margin-bottom: 32px
+
+.avatar
+    width: 128px
+    height: 128px
+    margin: 0 auto 32px
+    background: $neutrals6
+    border-radius: 50%
+    overflow: hidden
+    +dark
+        background: $neutrals3
+    img
+        width: 100%
+        min-height: 100%
+
+.man
+    margin-bottom: 4px
+    font-weight: 600
+
+.position
+    +caption-1
+    color: $neutrals4
+
+.wrap
+    flex-grow: 1
+    padding: 7px 64px 0 32px
+    +x
+        padding: 0 32px
+    +t
+        margin-bottom: 32px
+        padding: 0
+
+.item
+    display: flex
+    +caption-1
+    font-weight: 500
+    &:not(:last-child)
+        margin-bottom: 20px
+
+.icon
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-shrink: 0
+    width: 20px
+    height: 24px
+    margin-right: 12px
+    svg
+        fill: $neutrals4
+    
+.parameter
+    flex: 0 0 156px
+    padding-right: 16px
+    color: $neutrals4
+
+.note
+    margin-top: 32px
+    padding-top: 32px
+    border-top: 1px solid $neutrals6
+    color: $neutrals3
+    +dark
+        border-color: $neutrals3
+        color: $neutrals6
+
+.details
+    flex: 0 0 416px
+    padding-left: 64px
+    border-left: 1px solid $neutrals6
+    +x
+        flex: 0 0 350px
+        padding: 0
+        border: none
+    +d
+        flex: 0 0 272px
+    +dark
+        border-color: $neutrals3
+
+.head
+    display: flex
+    align-content: center
+    margin-bottom: 42px
+    +body-2
+    svg
+        position: relative
+        bottom: -1px
+        margin-right: 14px
+        +dark
+            fill: $neutrals8
+
+.control
+    display: flex
+    justify-content: space-between
+    align-items: center
+    height: 48px
+    margin-bottom: 20px
+    padding: 0 8px
+    border-radius: 24px
+    background: $neutrals2
+    +dark
+        background: $neutrals8
+
+.date
+    padding: 0 10px
+    text-align: center
+    +button-1
+    color: $neutrals8
+    +dark
+        color: $neutrals2
+
+.prev,
+.next
+    flex-shrink: 0
+    width: 32px
+    height: 32px
+    background: none
+    svg
+        fill: $neutrals8
+        transition: transform .2s
+        +dark
+            fill: $neutrals2
+
+.prev
+    &:hover
+        svg
+            transform: translateX(-2px)
+
+.next
+    &:hover
+        svg
+            transform: translateX(2px)
+
+.variants
+    display: flex
+    flex-wrap: wrap
+    margin: -8px 0 20px -8px
+
+.variant
+    margin: 8px 0 0 8px
+    padding: 0 25px
+    background: none
+    line-height: 48px
+    border-radius: 24px
+    box-shadow: inset 0 0 0 2px $neutrals6
+    +sf-pro-display
+    font-size: 16px
+    transition: background .2s
+    &:hover
+        background: $neutrals6
+    +dark
+        box-shadow: inset 0 0 0 2px $neutrals4
+        color: $neutrals8
+        &:hover
+            background: $neutrals4
+            
+.btns
+    display: flex
+    .button
+        &:first-child
+            margin-right: 12px
+        &:nth-child(2)
+            flex-grow: 1

@@ -1,0 +1,86 @@
+@import ../../../styles/helpers
+
+.section
+    +m
+        padding-top: 64px
+
+.head
+    max-width: 545px
+    margin-bottom: 80px
+    +m
+        margin-bottom: 48px
+
+.stage
+    margin-bottom: 32px
+
+.title
+    margin-bottom: 20px
+
+.info
+    margin-bottom: 24px
+    +body-1
+    color: $neutrals4
+
+.button
+    +m
+        width: 100%
+
+.wrap
+    +m
+        margin: 0 -12px
+
+.item
+    &:not(:last-child)
+        margin-bottom: 112px
+        +t
+            margin-bottom: 80px
+        +m
+            margin-bottom: 0
+
+.row
+    display: flex
+    align-items: center
+    margin: 0 -16px
+    +m
+        flex-direction: column-reverse
+        margin: 0
+
+.col
+    flex: 0 0 calc(50% - 32px)
+    width: calc(50% - 32px)
+    margin: 0 16px
+    +m
+        flex: 0 0 100%
+        width: 100%
+    img
+        width: 100%
+        border-radius: 24px
+    &:first-child
+        padding-top: 32px
+        +d
+            padding-top: 0
+        +m
+            margin-top: 48px
+
+.details
+    max-width: 260px
+    +m
+        max-width: 100%
+
+.number
+    margin-bottom: 24px
+    padding-bottom: 26px
+    border-bottom: 2px solid $neutrals6
+    +sf-pro-display
+    font-size: 32px
+    line-height: (40/32)
+    +dark
+        border-color: $neutrals3
+
+.category
+    margin-bottom: 16px
+    font-weight: 600
+
+.content
+    +caption-1
+    color: $neutrals4

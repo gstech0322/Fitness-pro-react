@@ -1,0 +1,46 @@
+@import ../../styles/helpers
+
+.container
+    text-align: center
+    
+.preview
+    margin-bottom: 66px
+    +m
+        margin-bottom: 48px
+    img
+        width: 545px
+        +d
+            width: 450px
+        +a
+            width: 100%
+
+.title
+    margin-bottom: 20px
+
+.text
+    max-width: 455px
+    margin: 0 auto 80px
+    color: $neutrals4
+    +d
+        margin-bottom: 64px
+    +m
+        margin-bottom: 48px
+
+.subscription
+    max-width: 355px
+    margin: 0 auto 16px
+
+.note
+    +caption-2
+    color: $neutrals5
+    +m
+        max-width: 240px
+        margin: 0 auto
+    a
+        font-weight: 600
+        color: $red
+        transition: opacity .2s
+        &:hover
+            opacity: .8
+
+

@@ -1,0 +1,63 @@
+@import ../../../styles/helpers
+
+.row
+    display: flex
+    margin: 0 -16px
+    +m
+        display: block
+        margin: 0
+
+.col
+    flex: 0 0 calc(50% - 32px)
+    width: calc(50% - 32px)
+    margin: 0 16px
+    +m
+        width: 100%
+        margin: 0
+        &:not(:last-child)
+            margin-bottom: 48px
+
+.logo
+    margin-bottom: 48px
+    +t
+        margin-bottom: 24px
+    img
+        max-width: 166px
+
+.content
+    max-width: 450px
+    margin-bottom: 24px
+    +body-1
+    +t
+        font-size: 20px
+    +m
+        font-size: 24px
+
+.details
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    margin-bottom: 48px
+    +caption-1
+    +m
+        margin-bottom: 32px
+
+.icon
+    margin-right: 14px
+
+.author
+    margin-right: 24px
+    font-weight: 600
+
+.description
+    color: $neutrals4
+    +t
+        margin-left: 34px
+
+.preview
+    position: relative
+    img
+        width: 100%
+        border-radius: 16px
+        +m
+            border-radius: 12px

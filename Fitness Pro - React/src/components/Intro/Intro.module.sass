@@ -1,0 +1,70 @@
+@import ../../styles/helpers
+
+.section
+    position: relative
+    display: flex
+    align-items: center
+    min-height: 816px
+    padding: 100px 0
+    +d
+        min-height: 600px
+        padding: 80px 0
+    +m
+        display: block
+        min-height: auto
+        padding: 32px 0 64px
+
+.wrap
+    position: relative
+    z-index: 3
+    max-width: 450px
+    +t
+        max-width: 360px
+
+.title
+    margin-bottom: 32px
+
+.text
+    margin-bottom: 40px
+    +body-1
+    color: $neutrals4
+
+.gallery
+    position: absolute
+    top: 53%
+    right: calc(50% - 541px)
+    width: 584px
+    transform: translateY(-40%)
+    pointer-events: none
+    +d
+        right: calc(50% - 440px)
+        width: 390px
+        transform: translateY(-44%)
+    +t
+        right: calc(50% - 380px)
+    +m
+        position: relative
+        top: auto
+        right: auto
+        left: -15px
+        margin: 96px auto 24px
+        transform: translateY(0)
+
+.preview
+    &:first-child
+        position: relative
+        z-index: 2
+    &:nth-child(2)
+        top: -27%
+        left: 4%
+        z-index: 1
+        width: 33%
+    &:nth-child(3)
+        top: -18%
+        right: 31%
+        z-index: 1
+        width: 33%
+    &:not(:first-child)
+        position: absolute
+    img
+        width: 100%

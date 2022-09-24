@@ -1,0 +1,59 @@
+@import ../../../styles/helpers
+
+.breadcrumbs
+    margin-bottom: 72px
+    +d
+        margin-bottom: 64
+    +m
+        margin-bottom: 32px
+
+.wrap
+    padding: 112px 64px
+    border-radius: 24px
+    background: $neutrals6
+    text-align: center
+    +t
+        padding: 80px 48px
+    +m
+        padding: 32px 16px
+    +dark
+        background: $neutrals3
+
+.title
+    margin-bottom: 12px
+
+.info
+    margin-bottom: 24px
+    +body-1
+    color: $neutrals4
+    +m
+        font-size: 16px
+
+.list
+    margin-left: -34px
+    +m
+        margin-left: -20px
+
+.item
+    display: inline
+    margin-left: 34px
+    +button-2
+    color: $neutrals4
+    +m
+        margin-left: 20px
+    &:not(:last-child)
+        &:after
+            content: ""
+            display: inline-block
+            width: 6px
+            height: 10px
+            margin-left: 34px
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='6' height='10' fill='none' viewBox='0 0 6 10'%3E%3Cpath fill-rule='evenodd' d='M.293.793a1 1 0 0 0 0 1.414L3.086 5 .293 7.793a1 1 0 1 0 1.414 1.414l3.5-3.5a1 1 0 0 0 0-1.414l-3.5-3.5a1 1 0 0 0-1.414 0z' fill='%23777e91'/%3E%3C/svg%3E") no-repeat 50% 50% / 100% auto
+            +m
+                margin-left: 20px
+
+.link
+    color: $neutrals4 
+    transition: color .2s
+    &:hover
+        color: $blue

@@ -1,0 +1,77 @@
+@import ../../../styles/helpers
+
+.section
+    +d
+        padding-top: 112px
+    +t
+        padding-top: 64px
+
+.head
+    margin-bottom: 80px
+    text-align: center
+    +m
+        margin-bottom: 48px
+
+.title
+    margin-bottom: 20px
+
+.info
+    max-width: 545px
+    margin: 0 auto 40px
+    color: $neutrals3
+    +dark
+        color: $neutrals6
+
+.nav
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    margin: -12px -6px 0
+    +m
+        display: none
+
+.dropdown
+    display: none
+    +m
+        display: block
+
+.btn
+    margin: 12px 6px 0
+    padding: 6px 12px
+    border-radius: 14px
+    background: none
+    +button-2
+    color: $neutrals4
+    transition: all .2s
+    &:hover
+        color: $neutrals3
+        +dark
+            color: $neutrals6
+    &.active
+        background: $neutrals3
+        color: $neutrals8
+        +dark
+            background: $neutrals8
+            color: $neutrals2
+
+.wrap
+    +m
+        position: relative
+        padding-bottom: 72px
+
+.slider
+    display: flex
+    flex-wrap: wrap
+    margin: -60px -16px 0
+    +m
+        position: static
+        display: block
+        margin: 0
+
+.slide
+    flex: 0 0 calc(33.333% - 32px)
+    width: calc(33.333% - 32px)
+    margin: 60px 16px 0
+    +m
+        width: auto
+        margin: 0

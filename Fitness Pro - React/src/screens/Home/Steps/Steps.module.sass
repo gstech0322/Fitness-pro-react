@@ -1,0 +1,126 @@
+@import ../../../styles/helpers
+
+.head
+    max-width: 400px
+    margin: 0 auto 80px
+    text-align: center
+    +d
+        margin-bottom: 64px
+    +m
+        margin-bottom: 40px
+
+.title
+    margin-bottom: 20px
+
+.info
+    color: $neutrals3
+    +dark
+        color: $neutrals6
+
+.list
+    display: flex
+    margin: 0 -16px
+    +t
+        margin: 0 -40px
+        overflow: auto
+        overflow-x: auto 
+        -ms-overflow-style: none
+        scrollbar-width: none
+        -webkit-overflow-scrolling: touch
+        &::-webkit-scrollbar
+            display: none 
+        &:before,
+        &:after
+            content: ""
+            flex-shrink: 0
+            width: 40px
+            height: 1px
+
+.item
+    position: relative
+    flex: 0 0 calc(25% - 32px)
+    width: calc(25% - 32px)
+    margin: 0 16px
+    text-align: center
+    +t
+        flex: 0 0 256px
+        width: 256px
+        margin: 0
+    +m
+        text-align: left
+    &:after
+        content: ""
+        position: absolute
+        top: 39px
+        right: -79px
+        width: 120px
+        height: 2px
+        background-image: linear-gradient(90deg, $neutrals5 0, $neutrals5 6px, transparent 6px, transparent 14px)
+        background-repeat: repeat-x
+        background-size: 12px auto
+        +r(1260)
+            right: -66px
+            width: 100px
+        +d
+            right: -50px
+            width: 60px
+        +t
+            right: -79px
+            width: 120px
+        +m
+            right: 11px
+    &:first-child
+        .preview
+            &:before
+                display: none
+    &:last-child
+        &:after
+            display: none
+        .preview
+            &:after
+                display: none
+    &:not(:last-child)
+        +t
+            margin-right: 32px
+
+.preview
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 80px
+    height: 80px
+    margin: 0 auto 80px
+    border-radius: 24px
+    +m
+        margin: 0 0 32px 0
+    &:before,
+    &:after
+        content: ""
+        position: absolute
+        top: 50%
+        width: 12px
+        height: 12px
+        transform: translateY(-50%)
+        border-radius: 50%
+        border: 2px solid $neutrals5
+    &:before
+        left: -36px
+    &:after
+        right: -36px
+
+.number
+    margin-bottom: 32px
+    +caption-2
+    font-weight: 700
+    color: $neutrals4
+
+.subtitle
+    margin-bottom: 16px
+    font-weight: 600
+
+.content
+    +caption-1
+    color: $neutrals3
+    +dark
+        color: $neutrals6

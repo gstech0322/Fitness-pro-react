@@ -1,0 +1,121 @@
+@import ../../styles/helpers
+
+.avatar
+  width: 128px
+  height: 128px
+  margin: 0 auto 20px
+  border-radius: 50%
+  background: $neutrals6
+  overflow: hidden
+  +dark
+    background: $neutrals3
+  img
+    width: 100%
+    min-height: 100%
+  
+.trainer
+  text-align: center
+
+.position
+  margin-bottom: 20px
+  text-align: center
+  +caption-1
+  color: $neutrals4
+
+.socials
+  display: flex
+  justify-content: center
+  margin-bottom: 48px
+  +m
+    margin-bottom: 24px
+
+.social
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-shrink: 0
+    width: 24px
+    height: 24px
+    svg
+        fill: $neutrals4
+        transition: fill .2s
+    &:hover svg
+        fill: $neutrals2
+        +dark
+          fill: $neutrals6
+    &:not(:last-child)
+        margin-right: 24px
+      
+.subscription
+  max-width: 300px
+  margin: 0 auto 48px
+  +m
+    max-width: 100%
+    margin: 0
+
+.wrap
+  margin: 0 -16px
+  +m
+    display: none
+
+.item
+    color: $neutrals2
+    +dark
+      color: $neutrals8
+    &:hover
+        .preview
+            box-shadow: 0 0 0 2px $red
+            img
+                transform: scale(1.1)
+
+.preview
+    position: relative
+    overflow: hidden
+    border-radius: 16px
+    transition: box-shadow .2s
+    img
+        width: 100%
+        transition: transform 2s
+
+.category
+    position: absolute
+    top: 8px
+    left: 8px
+    
+.head
+    display: flex
+    align-items: flex-start
+    padding: 20px 0 12px
+
+.level
+    flex-shrink: 0
+    margin-left: 10px
+
+.title
+    margin-bottom: 2px
+    font-weight: 600
+
+.parameters
+    display: flex
+    justify-content: space-between
+    padding-top: 12px
+    border-top: 1px solid $neutrals6
+    +dark
+      border-color: $neutrals3
+
+.parameter
+    display: flex
+    align-items: center
+    +caption-2
+    font-weight: 600
+    color: $neutrals3
+    +dark
+      color: $neutrals6
+    svg
+        margin-right: 10px
+        fill: $neutrals4
+
+.btns
+  text-align: right
+  +m
+    display: none

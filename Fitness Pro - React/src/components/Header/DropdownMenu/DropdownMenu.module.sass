@@ -1,0 +1,334 @@
+@import ../../../styles/helpers
+
+.head
+    position: relative
+    display: inline-flex
+    align-items: center
+    padding: 16px 8px
+    +button-2
+    color: $neutrals4
+    transition: color .2s
+    user-select: none
+    cursor: pointer
+    // -webkit-tap-highlight-color: rgba(0,0,0,0)
+    +d
+        padding: 0 50px 0 0
+        font-size: 40px
+        line-height: 1.2
+        letter-spacing: -.01em
+    +t
+        font-size: 32px
+    +m
+        display: flex
+        padding: 18px 42px 18px 32px 
+        font-size: 24px
+    &:hover,
+    &.open,
+    &.active
+        color: $neutrals2
+        +dark
+            color: $neutrals8
+        +m
+            box-shadow: inset 2px 0 0 0 $red
+        svg
+            fill: $neutrals2
+            +dark
+                fill: $neutrals8
+    &.open
+        svg
+            transform: rotate(180deg)
+    svg
+        margin-left: 12px
+        fill: $neutrals4
+        transition: all .2s
+        +d
+            width: 15px
+            height: 15px
+            margin-left: 50px
+        +m
+            width: 10px
+            height: 10px
+            margin-left: auto
+
+.body
+    position: absolute
+    top: 100%
+    left: 50%
+    width: 1120px
+    visibility: hidden
+    opacity: 0
+    transform: translate(-50%,10px) scale(.9)
+    transform-origin: 50% -50px
+    will-change: transform
+    animation: showBody .4s forwards
+    +d
+        position: static
+        width: auto
+        margin-right: -416px
+        padding-top: 48px
+        transform: translate(0,0) scale(1)
+        visibility: visible
+        opacity: 1
+        animation: none
+    +t
+        margin-right: -344px
+    +m
+        margin-right: 0
+        padding-top: 0
+    +dark
+        border-color: $neutrals3
+
+@keyframes showBody
+  0%
+    visibility: hidden
+    opacity: 0
+    transform: translate(-50%,10px) scale(.9)
+  100%
+    visibility: visible
+    opacity: 1
+    transform: translate(-50%,0) scale(1)
+
+.inner
+    max-width: 1120px
+    margin: 0 auto
+    background: $neutrals8
+    border-radius: 24px
+    box-shadow: 0px 64px 64px -48px rgba(15, 15, 15, 0.1)
+    border: 1px solid $neutrals6
+    +d
+        max-width: 100%
+        margin: 0
+        box-shadow: 0px 24px 24px -24px rgba(15, 15, 15, 0.1)
+    +m
+        padding: 0 32px
+        box-shadow: none
+        border: none
+    +dark
+        background: $neutrals1
+        border-color: $neutrals3
+        box-shadow: 0px 64px 64px -48px rgba(15, 15, 15, 0.1)
+
+.row
+    display: flex
+    +m
+        display: block
+
+.col
+    padding: 40px
+    +d
+        padding: 32px
+    +m
+        padding: 0
+    &:first-child
+        display: flex
+        flex-direction: column
+        flex: 0 0 256px
+        +d
+            flex: 0 0 380px
+        +t
+            flex: 0 0 280px
+    &:nth-child(2)
+        flex-grow: 1
+        border-left: 1px solid $neutrals6
+        +m
+            display: none
+        +dark
+            border-color: $neutrals3
+
+.direction
+    margin: -16px -16px 32px
+    padding: 16px
+    border-radius: 8px
+    transition: background .2s
+    +m
+        display: none
+    &:hover
+        background: $neutrals7
+        +dark
+            background: $neutrals2
+
+.info
+    +body-2
+    color: $neutrals2
+    +dark
+        color: $neutrals8
+
+.preview
+    margin-top: 24px
+    +t
+        display: none
+    img
+        max-width: 80px
+    
+.menu
+    margin: auto -16px 0
+
+.box
+    display: flex
+    align-items: center
+    padding: 16px 8px 16px 16px
+    border-radius: 8px
+    font-weight: 600
+    color: $neutrals2
+    transition: all .2s
+    +dark
+        color: $neutrals8
+        +m
+            color: $neutrals4
+    &:hover,
+    &.active
+        background: $neutrals7
+        +dark
+            background: $neutrals2
+            +m
+                color: $neutrals8
+    &:not(:last-child)
+        margin-bottom: 8px
+        +m
+            margin-bottom: 0
+
+.icon
+    flex-shrink: 0
+    width: 32px
+    margin-right: 12px
+    img
+        max-width: 100%
+    
+.line
+    display: flex
+    margin: 0 -20px
+
+.cell
+    flex: 0 0 calc(50% - 40px)
+    width: calc(50% - 40px)
+    margin: 0 20px
+    +d
+        flex: 0 0 100%
+        width: 100%
+    &:first-child
+        +d
+            display: none
+
+.card,
+.item
+    color: $neutrals2
+    +dark
+        color: $neutrals8
+    &:hover
+        .photo
+            box-shadow: 0 0 0 3px $red
+            img
+                transform: scale(1.05)
+
+.card
+    display: block
+    .photo
+        position: relative
+        margin-bottom: 24px
+        border-radius: 16px
+        .category
+            position: absolute
+            top: 8px
+            left: 8px
+    .user
+        margin-right: auto
+    .title
+        +body-2
+    
+.photo
+    overflow: hidden
+    transition: box-shadow .2s
+    img
+        width: 100%
+        transition: transform 1.4s
+
+.top
+    display: flex
+    align-items: flex-start
+    
+.level
+    flex-shrink: 0
+    margin-left: 10px
+
+.user
+    display: flex
+
+.avatar
+    flex-shrink: 0
+    width: 40px
+    height: 40px
+    margin: 5px 16px 0 0
+    border-radius: 50%
+    background: $neutrals6
+    overflow: hidden
+    +dark
+        background: $neutrals3
+    img
+        width: 100%
+        height: 100%
+    
+.title
+    margin-bottom: 2px
+    font-weight: 600
+
+.trainer
+    +caption-1
+    color: $neutrals4
+
+.content
+    margin-top: 12px
+    +caption-1
+    color: $neutrals4
+
+.item
+    display: flex
+    align-items: center
+    .photo
+        flex-shrink: 0
+        width: 140px
+        margin-right: 24px
+        border-radius: 8px
+        +d
+            width: 110px
+    .title
+        font-weight: 600
+    .category
+        margin-bottom: 12px
+        +d
+            margin-bottom: 8px
+    &:not(:last-child)
+        margin-bottom: 32px
+        +d
+            margin-bottom: 24px
+
+.foot
+    padding: 40px
+    border-top: 1px solid $neutrals6
+    +dark
+            border-color: $neutrals3
+    +d
+        padding: 32px
+    +m
+        display: none
+
+.stage
+    margin-bottom: 32px
+    +body-2
+
+.list
+    display: flex
+    margin: 0 -16px
+    .user
+        align-items: center
+        flex-grow: 1
+        margin: 0 16px
+        &:nth-child(n+4)
+            +d
+                display: none
+        &:nth-child(n+3)
+            +t
+                display: none
+    .avatar
+        width: 56px
+        height: 56px
+        

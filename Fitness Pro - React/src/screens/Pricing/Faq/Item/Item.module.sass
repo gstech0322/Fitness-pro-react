@@ -1,0 +1,74 @@
+@import ../../../../styles/helpers
+
+.item
+    border-top: 1px solid $neutrals6
+    +dark
+        border-color: $neutrals3
+    
+.head
+    position: relative
+    padding: 36px 40px 36px 0
+    font-weight: 600
+    cursor: pointer
+    -webkit-tap-highlight-color: rgba(0,0,0,0)
+    +m
+        padding: 32px 40px 32px 0
+    &.active
+        .arrow
+            svg
+                transform: rotate(180deg)
+
+.arrow
+    position: absolute
+    top: 50%
+    right: 0
+    width: 24px 
+    height: 24px
+    transform: translateY(-50%)
+    svg
+        fill: $neutrals4
+        transition: transform .2s
+
+.body
+    display: none
+    padding: 8px 0 32px
+    &.visible
+        display: block
+
+.row
+    display: flex
+    justify-content: space-between
+    +d
+        margin: 0 -16px
+    +m
+        display: block
+        margin: 0
+
+.col
+    flex: 0 0 450px
+    +d
+        flex: 0 0 calc(50% - 32px)
+        width: calc(50% - 32px)
+        margin: 0 16px
+    +m
+        width: 100%
+        margin: 0
+        &:not(:last-child)
+            margin-bottom: 32px
+
+.preview
+    position: relative
+    img
+        width: 100%
+        border-radius: 16px
+    
+.info
+    margin-bottom: 20px
+    font-weight: 600
+
+.content
+    margin-bottom: 24px
+    color: $neutrals4
+    p
+        &:not(:last-child)
+            margin-bottom: 24px

@@ -1,0 +1,55 @@
+@import ../../styles/helpers
+
+.scroll
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 64px
+    height: 64px
+    border-radius: 50%
+    background: none
+    overflow: hidden
+    border: 2px solid $neutrals6
+    transition: border-color .2s
+    +d
+        width: 40px
+        height: 40px
+    svg
+        fill: $neutrals4
+        transition: fill .2s
+    &:hover
+        border-color: $neutrals2
+        svg
+            fill: $neutrals2
+    +dark
+        border-color: $neutrals3
+        &:hover
+            border-color: $neutrals8
+            svg
+                fill: $neutrals8
+
+.line
+    display: flex
+    flex-direction: column
+    transform: translateY(-33px)
+    animation: arrowsDown ease-out 1.4s infinite
+    +d
+        transform: translateY(-22px)
+        animation-name: arrowsDownSmall
+    svg
+        &:not(:last-child)
+            margin-bottom: 50px
+            +d
+                margin-bottom: 30px
+
+@keyframes arrowsDown
+    80%
+        transform: translateY(33px)
+    100%
+        transform: translateY(33px)
+
+@keyframes arrowsDownSmall
+    80%
+        transform: translateY(22px)
+    100%
+        transform: translateY(22px)

@@ -1,0 +1,68 @@
+// fade in
+@keyframes fadeIn
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+    
+.fadeIn
+  animation-name: fadeIn
+
+// fade in up
+@keyframes fadeInUp
+  0%
+    opacity: 0
+    transform: translateY(40px)
+  100%
+    opacity: 1
+    transform: translateY(0)
+    
+.fadeInUp
+  transform-origin: 0 0
+  animation-name: fadeInUp
+
+// fade in down
+@keyframes fadeInDown
+  0%
+    opacity: 0
+    transform: translateY(-40px)
+  100%
+    opacity: 1
+    transform: translateY(0)
+    
+.fadeInDown
+  transform-origin: 0 0
+  animation-name: fadeInDown
+
+// slide in left
+@keyframes slideInLeft
+  0%
+    transform: translateX(-40px)
+  100%
+    transform: translateX(0)
+    
+.slideInLeft
+  animation-name: slideInLeft
+  animation-fill-mode: forwards
+
+// slide in right
+@keyframes slideInRight
+  0%
+    transform: translateX(40px)
+  100%
+    transform: translateX(0)
+    
+.slideInRight
+  animation-name: slideInRight
+  animation-fill-mode: forwards
+
+// slide in down
+@keyframes slideInDown
+  0%
+    transform: translateY(80px)
+  100%
+    transform: translateY(0)
+    
+.slideInDown
+  animation-name: slideInDown
+  animation-fill-mode: forwards

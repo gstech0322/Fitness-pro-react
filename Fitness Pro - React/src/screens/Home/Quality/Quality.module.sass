@@ -1,0 +1,59 @@
+@import ../../../styles/helpers
+
+.list
+    display: flex
+    margin: 0 -16px
+    +t
+        flex-wrap: wrap
+        margin: -64px -16px 0
+    +m
+        display: block
+        margin: 0
+
+.item
+    position: relative
+    flex: 0 0 calc(25% - 32px)
+    width: calc(25% - 32px)
+    margin: 0 16px
+    +t
+        flex: 0 0 calc(50% - 32px)
+        width: calc(50% - 32px)
+        margin: 64px 16px 0
+    +m
+        width: 100%
+        margin: 0
+        &:not(:last-child)
+            margin-bottom: 64px
+
+.preview
+    display: flex
+    justify-content: center
+    align-content: center
+    width: 40px
+    height: 40px
+    margin-bottom: 64px
+    +t
+        margin-bottom: 48px
+    +m
+        margin-bottom: 32px
+    img
+        max-width: 100%
+
+.counter
+    margin-bottom: 40px
+    padding-bottom: 40px
+    border-bottom: 1px solid $neutrals6
+    +sf-pro-display
+    font-size: 64px
+    line-height: 1
+    font-weight: 700
+    +dark
+        border-color: $neutrals3
+
+.title
+    margin-bottom: 16px
+    font-weight: 600
+
+.content
+    +caption-1
+    color: $neutrals4

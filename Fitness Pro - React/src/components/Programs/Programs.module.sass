@@ -1,0 +1,85 @@
+@import ../../styles/helpers
+
+.section
+    position: relative
+
+.anchor
+    position: absolute
+    top: -64px
+    left: 0
+    right: 0
+
+.top
+    max-width: 620px
+    margin: 0 auto 80px
+    text-align: center
+    +d
+        margin-bottom: 64px
+    +m
+        margin-bottom: 40px
+
+.title
+    margin-bottom: 16px
+
+.info
+    margin-bottom: 40px
+    +caption-1
+    color: $neutrals4
+    strong
+        font-weight: 600
+
+.green
+    color: $green
+
+.black
+    color: #23262F
+    +dark
+        color: $neutrals8
+
+.wrap
+    margin: 0 -12px
+
+.item
+    height: 100%
+    padding: 64px 32px
+    background: $neutrals7
+    border-radius: 20px
+    transition: all .2s
+    +d
+        padding: 48px 24px
+    +m
+        padding: 64px 24px
+    &:hover
+        box-shadow: 0px 64px 64px -48px rgba(15, 15, 15, 0.1)
+        background: $neutrals8
+        .button
+            background: $red
+            box-shadow: 0 0 0 2px $red inset
+            color: $neutrals8
+            &:hover
+                background: darken($red, 10)
+                box-shadow: 0 0 0 2px darken($red, 10) inset
+                color: $neutrals8
+    +dark
+        background: $neutrals2
+        &:hover
+            background: transparent
+            box-shadow: inset 0 0 0 1px $neutrals2
+
+.icon
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 48px
+    height: 48px
+    margin-bottom: 32px
+    border-radius: 50%
+
+.subtitle
+    margin-bottom: 16px
+    +body-2
+
+.content
+    margin-bottom: 32px
+    +caption-1
+    color: $neutrals4

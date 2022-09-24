@@ -1,0 +1,55 @@
+@import ../../../../styles/helpers
+
+.item
+    position: relative
+    padding: 48px 32px
+    box-shadow: inset 0 0 0 1px $neutrals6
+    border-radius: 24px
+    text-align: center
+    cursor: pointer
+    transition: box-shadow .2s
+    +d
+        padding: 48px 16px
+    +m
+        padding: 24px 12px
+    +dark
+        box-shadow: inset 0 0 0 1px $neutrals3
+        background: $neutrals2
+    &:hover
+        box-shadow: inset 0 0 0 2px $neutrals5
+        +dark
+            box-shadow: inset 0 0 0 2px $neutrals4
+
+    
+.avatar
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 128px
+    height: 128px
+    margin: 0 auto 32px
+    border-radius: 50%
+    overflow: hidden
+    background: $neutrals6
+    +m
+        width: 80px
+        height: 80px
+        margin-bottom: 16px
+    +dark
+        background: $neutrals3
+    img
+        width: 100%
+        min-height: 100%
+
+.man
+    margin-bottom: 4px
+    font-weight: 500
+    +m
+        font-size: 12px
+
+.position
+    +caption-1
+    color: $neutrals4
+    +m
+        font-size: 12px

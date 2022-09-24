@@ -1,0 +1,89 @@
+@import ../../../styles/helpers
+
+.hero
+    position: relative
+    display: flex
+    align-items: center
+    min-height: 880px
+    padding: 34px 0 180px
+    +d
+        min-height: 606px
+        padding: 80px 0
+    +m
+        min-height: auto
+        padding: 64px 0 0
+
+.wrap
+    position: relative
+    z-index: 3
+    max-width: 450px
+    +t
+        max-width: 350px
+    +m
+        max-width: 100%
+        margin-bottom: 32px
+
+.title
+    margin-bottom: 20px
+
+.text
+    margin-bottom: 40px
+    color: $neutrals4
+
+.btns
+    display: flex
+
+.button
+    +m
+        padding: 0 22px
+    &:not(:last-child)
+        margin-right: 16px
+    
+.scroll
+    position: absolute
+    bottom: 96px
+    +d
+        display: none
+
+.gallery
+    position: absolute
+    top: 50%
+    right: calc(50% - 720px)
+    width: 800px
+    transform: translateY(-50%)
+    pointer-events: none
+    +d
+        top: 54%
+        right: calc(50% - 600px)
+        width: 600px
+    +t
+        right: calc(50% - 520px)
+        width: 550px
+    +m
+        position: relative
+        top: auto
+        right: auto
+        width: 580px
+        margin: 0 auto
+        transform: translateY(0)
+    +s
+        left: -32%
+
+.preview
+    &:first-child
+        position: relative
+        z-index: 2
+    &:nth-child(2)
+        top: 10%
+        right: 20%
+        z-index: 3
+        width: 20%
+    &:nth-child(3)
+        top: 47%
+        left: 12%
+        z-index: 1
+        width: 8.5%
+    &:not(:first-child)
+        position: absolute
+    img
+        width: 100%

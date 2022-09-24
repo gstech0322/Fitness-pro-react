@@ -1,0 +1,121 @@
+@import ../../../styles/helpers
+
+.section
+    position: relative
+    +m
+        padding: 48px 0
+        border: none
+
+.row
+    display: flex
+    margin: 0 -12px
+    +d
+        margin: 0
+    &:first-child
+        +m
+            display: block
+    &:nth-child(2)
+        +m
+            flex-direction: column-reverse
+            .col
+                &:nth-child(2)
+                    margin-bottom: 60px
+    &:not(:last-child)
+        margin-bottom: 128px
+        +d
+            margin-bottom: 80px
+        +m
+            margin-bottom: 60px
+
+.col
+    flex: 0 0 calc(50% - 24px)
+    width: calc(50% - 24px)
+    margin: 0 12px
+    +d
+        margin: 0
+    &:first-child
+        +d
+            flex: 1 0 auto
+            width: auto
+            padding-right: 32px
+        +m
+            flex: 0 0 100%
+            width: 100%
+            padding: 0
+    &:nth-child(2)
+        +d
+            flex: 0 0 528px
+            width: 528px
+        +t
+            flex: 0 0 400px
+            width: 400px
+        +m
+            flex: 0 0 100%
+            width: 100%
+
+.title
+    margin-bottom: 20px
+
+.info
+    max-width: 450px
+    color: $neutrals4
+
+.list
+    max-width: 260px
+    +m
+        max-width: 100%
+
+.item
+    &:not(:last-child)
+        margin-bottom: 48px
+        +t
+            margin-bottom: 32px
+    
+.number
+    display: inline-block
+    width: 38px
+    margin-bottom: 24px
+    border-radius: 12px
+    text-align: center
+    font-size: 14px
+    font-weight: 500
+    line-height: 24px
+    color: $neutrals8
+    +t
+        margin-bottom: 16px
+    +m
+        margin-bottom: 24px
+
+.subtitle
+    margin-bottom: 16px
+    font-weight: 500
+    +t
+        margin-bottom: 12px
+    +m
+        margin-bottom: 16px
+
+.content
+    +caption-1
+    color: $neutrals4
+
+.bg
+    position: relative
+    background: $neutrals6
+    border-radius: 24px
+    +dark
+        background: $neutrals3
+    img
+        width: 100%
+    & > img
+        border-radius: 24px
+
+.preview
+    position: absolute
+    top: 1.5%
+    left: -31%
+    width: 64.5%
+    pointer-events: none
+    +d
+        top: 0
+        left: 0
+        width: 45%

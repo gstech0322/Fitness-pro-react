@@ -1,0 +1,90 @@
+@import ../../../styles/helpers
+
+.wrapper
+    position: relative
+    +m
+        padding-bottom: 64px
+
+.wrap
+    margin: 0 -16px
+    text-align: center
+
+.head
+    max-width: calc(50% - 16px)
+    margin: 0 0 80px auto
+    +d
+        max-width: calc(66.66% - 16px)
+    +m
+        max-width: 100%
+        margin: 0 0 48px
+
+.title
+    margin-bottom: 20px
+
+.info
+    color: $neutrals3
+    +dark
+        color: $neutrals6
+
+.item
+    display: block
+    text-align: center
+
+.preview
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 222px
+    margin-bottom: 24px
+    background: $neutrals6
+    border-radius: 8px
+    +dark
+        background: $neutrals3
+    img
+        max-width: 120px
+        max-height: 120px
+    &:before,
+    &:after
+        content: ""
+        position: absolute
+        opacity: 0
+        visibility: hidden
+        transition: all .2s
+    &:before
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        background: $neutrals2
+        border-radius: 8px
+        +dark
+            background: $neutrals8
+    &:after
+        top: 50%
+        left: 50%
+        width: 48px
+        height: 48px
+        transform: translate(-50%,-50%)
+        border-radius: 50%
+        background: $neutrals8 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='7' fill='none' xmlns:v='https://vecta.io/nano'%3E%3Cpath fill-rule='evenodd' d='M6.394.843c.271-.25.692-.233.942.038L9.49 3.214c.236.255.236.649 0 .904L7.336 6.452c-.25.271-.672.287-.942.038s-.287-.672-.038-.942l1.121-1.215H1c-.368 0-.667-.298-.667-.667S.632 3 1 3h6.477L6.356 1.786c-.25-.271-.233-.692.038-.942z' fill='%23777e91'/%3E%3C/svg%3E") no-repeat 50% 50% / 10px auto
+        +dark
+            background-color: $neutrals2
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='7' fill='none' xmlns:v='https://vecta.io/nano'%3E%3Cpath fill-rule='evenodd' d='M6.394.843c.271-.25.692-.233.942.038L9.49 3.214c.236.255.236.649 0 .904L7.336 6.452c-.25.271-.672.287-.942.038s-.287-.672-.038-.942l1.121-1.215H1c-.368 0-.667-.298-.667-.667S.632 3 1 3h6.477L6.356 1.786c-.25-.271-.233-.692.038-.942z' fill='%23777E90'/%3E%3C/svg%3E")
+
+.item:hover .preview
+    &:before,
+    &:after
+        opacity: 1
+        visibility: visible
+    
+.subtitle
+    margin-bottom: 8px
+    font-weight: 600
+    color: $neutrals2
+    +dark
+        color: $neutrals8
+
+.content
+    +caption-1
+    color: $neutrals4

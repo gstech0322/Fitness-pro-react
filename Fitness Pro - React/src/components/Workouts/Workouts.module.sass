@@ -1,0 +1,98 @@
+@import ../../styles/helpers
+
+.section
+    position: relative
+    display: flex
+    align-items: center
+    min-height: 1096px
+    padding: 100px 0
+    +x
+        min-height: 960px
+    +d
+        min-height: 840px
+    +m
+        min-height: auto
+        padding: 64px 0
+
+.wrap
+    position: relative
+    z-index: 3
+    max-width: 450px
+    +d
+        max-width: 420px
+
+.title
+    margin-bottom: 32px
+
+.info
+    margin-bottom: 32px
+    +body-1
+    color: $neutrals4
+
+.list
+    margin-bottom: 48px
+
+.item
+    position: relative
+    padding-left: 36px
+    font-weight: 600
+    color: $neutrals4 
+    &:before
+        content: ""
+        position: absolute
+        top: -1px
+        left: 0
+        width: 24px
+        height: 24px
+        background: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 12L10 16L18 8' stroke='%2345B36B' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") no-repeat 50% 50% / 100% auto
+    &:not(:last-child)
+        margin-bottom: 16px
+    
+.btns
+    display: flex
+
+.button
+    +m
+        padding: 0 20px
+    &:not(:last-child)
+        margin-right: 12px
+
+.gallery
+    position: absolute
+    top: 50%
+    right: calc(50% - 663px)
+    width: 744px
+    transform: translateY(-50%)
+    pointer-events: none
+    +x
+        right: calc(50% - 570px)
+        width: 640px
+    +d
+        width: 550px
+    +m
+        position: relative
+        top: auto
+        right: auto
+        left: -4%
+        width: 380px
+        margin: 0 auto 42px
+        transform: translateY(0)
+
+.preview
+    &:first-child
+        position: relative
+        z-index: 1
+    &:nth-child(2)
+        top: 10%
+        left: 47%
+        z-index: 2
+        width: 13.5%
+    &:nth-child(3)
+        top: 32%
+        right: 2.5%
+        z-index: 2
+        width: 14.5%
+    &:not(:first-child)
+        position: absolute
+    img
+        width: 100%

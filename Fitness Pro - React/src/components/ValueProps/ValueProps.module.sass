@@ -1,0 +1,63 @@
+@import ../../styles/helpers
+
+.head
+    max-width: 580px
+    margin: 0 auto 80px
+    text-align: center
+    +d
+        margin-bottom: 64px
+    +m
+        text-align: left
+
+.stage
+    margin-bottom: 8px
+    color: $neutrals4
+
+.list
+    display: flex
+    +m
+        display: block
+
+.item
+    flex: 0 0 31%
+    padding: 34px 83px
+    +x
+        padding: 34px 64px
+    +d
+        padding: 32px
+    +m
+        padding: 0 
+    &:first-child
+        padding-left: 0
+    &:nth-child(2)
+        flex: 0 0 38%
+        border-width: 0 1px
+        border-style: solid
+        border-color: $neutrals6 
+        +m
+            border: none
+        +dark
+            border-color: $neutrals3
+    &:last-child
+        padding-right: 0
+    &:not(:last-child)
+        +m
+            margin-bottom: 24px
+            padding-bottom: 24px
+            border-bottom: 1px solid $neutrals6
+            +dark
+                border-color: $neutrals3
+
+.icon
+    margin-bottom: 32px
+    svg
+        +dark
+            fill: $neutrals8
+
+.category
+    margin-bottom: 32px
+    font-weight: 600
+    
+.content
+    +caption-1
+    color: $neutrals4

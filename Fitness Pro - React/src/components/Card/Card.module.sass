@@ -1,0 +1,94 @@
+@import ../../styles/helpers
+
+.link
+    display: flex
+    flex-direction: column
+    height: 100%
+    color: $neutrals2
+    +dark
+        color: $neutrals8
+    &:hover
+        .preview
+            box-shadow: 0 0 0 3px $red
+            img
+                transform: scale(1.1)
+                +m
+                    transform: scale(1)
+
+.preview
+    position: relative
+    overflow: hidden
+    border-radius: 16px
+    transition: box-shadow .2s
+    img
+        width: 100%
+        border-radius: 16px
+        transition: transform 2s
+
+.category
+    position: absolute
+    top: 8px
+    left: 8px
+    
+.head
+    display: flex
+    align-items: flex-start
+    flex-grow: 1
+    padding: 20px 0 12px
+    +m
+        display: block
+        padding: 16px 0
+
+.level
+    flex-shrink: 0
+    margin-left: 10px
+    +m
+        margin: 8px 0 0 56px
+
+.user
+    display: flex
+    margin-right: auto
+    +m
+        margin-right: 0
+
+.avatar
+    flex-shrink: 0
+    width: 40px
+    height: 40px
+    margin: 5px 16px 0 0
+    border-radius: 50%
+    background: $neutrals6
+    +dark
+        background: $neutrals3
+    img
+        width: 100%
+        height: 100%
+        border-radius: 50%
+    
+.title
+    margin-bottom: 2px
+    font-weight: 600
+
+.trainer
+    +caption-1
+    color: $neutrals4
+
+.parameters
+    display: flex
+    justify-content: space-between
+    padding: 12px 0 20px
+    border-top: 1px solid $neutrals6
+    +dark
+        border-color: $neutrals3
+
+.parameter
+    display: flex
+    align-items: center
+    +caption-2
+    font-weight: 600
+    color: $neutrals3
+    +dark
+        color: $neutrals6
+    svg
+        margin-right: 10px
+        fill: $neutrals4

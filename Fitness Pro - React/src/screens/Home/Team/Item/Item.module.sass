@@ -1,0 +1,43 @@
+@import ../../../../styles/helpers
+
+.item
+    position: relative
+    text-align: center
+    cursor: pointer
+    &:hover
+        .avatar
+            box-shadow: 0 0 0 2px $red
+            +m
+                box-shadow: none
+    
+.avatar
+    position: relative
+    width: 160px
+    margin: 0 auto 24px
+    border-radius: 16px
+    overflow: hidden
+    background: $neutrals6
+    transition: box-shadow .2s
+    +dark
+            background: $neutrals3
+    &:before
+        content: ''
+        display: block
+        padding-bottom: 100%
+    +m
+        width: 100%
+    img
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        object-fit: cover
+
+.man
+    margin-bottom: 4px
+    font-weight: 500
+
+.position
+    +caption-1
+    color: $neutrals4

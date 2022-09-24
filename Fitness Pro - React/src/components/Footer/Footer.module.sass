@@ -1,0 +1,158 @@
+@import ../../styles/helpers
+
+.footer
+    border-top: 1px solid rgba($neutrals4, .3)
+    +dark
+        border-color: $neutrals3
+
+.container
+    display: flex
+    +m
+        display: block
+
+.body
+    +m
+        position: relative
+        padding-top: 32px
+
+.col
+    flex: 0 0 30.5%
+    padding: 80px 86px 64px
+    +x
+        padding: 80px 64px 64px
+    +d
+        flex: 0 0 34%
+    +t
+        padding: 64px 32px 48px
+    +m
+        padding: 32px 0
+        border-bottom: 1px solid $neutrals6
+        +dark
+            border-color: $neutrals3
+    &:first-child
+        display: flex
+        flex: 0 0 39%
+        padding-left: 0
+        +d
+            flex: 0 0 32%
+        +m
+            display: block
+    &:nth-child(3)
+        padding-right: 0
+    &:nth-child(2),
+    &:nth-child(3)
+        border-left: 1px solid $neutrals6
+        +m
+            border-left: none
+        +dark
+            border-color: $neutrals3
+
+.box
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    margin-right: 112px
+    +x
+        margin-right: 76px
+    +d
+        margin-right: 40px
+    +t
+        margin-right: 24px
+    +m
+        margin: 0 0 40px
+
+.logo
+    display: inline-block
+    width: 32px
+    margin-bottom: auto
+    overflow: hidden
+    +m
+        width: auto
+    img
+        width: 166px
+
+.item
+    .category
+        display: none
+        +m
+            display: flex
+            align-items: center
+            margin-bottom: 0
+        svg
+            margin-left: auto
+            fill: $neutrals4
+            transition: transform .2s
+    &.active
+        +m
+            .category
+                svg
+                    transform: rotate(180deg)
+            .menu
+                display: flex
+
+.menu
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    +m
+        display: none
+        padding-top: 40px
+
+.link
+    +button-2
+    color: $neutrals4
+    transition: color .2s
+    &:hover
+        color: $neutrals2
+        +dark
+            color: $neutrals8
+    &:not(:last-child)
+        margin-bottom: 24px
+
+.category
+    margin-bottom: 41px
+    +hairline-2
+
+.info
+    +caption-1
+    p
+        &:not(:last-child)
+            margin-bottom: 8px
+    &:not(:last-child)
+        margin-bottom: 24px
+
+.foot
+    padding: 25px 0 20px
+    border-top: 1px solid $neutrals6
+    +m
+        padding: 56px 0 48px
+        border: none
+    +dark
+        border-color: $neutrals3
+
+.copyright
+    margin-right: auto
+    +caption-2
+    color: $neutrals4
+    +m
+        margin: 0 0 24px
+
+.socials
+    display: flex
+
+.social
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-shrink: 0
+    width: 20px
+    height: 20px
+    svg
+        fill: $neutrals4
+        transition: fill .2s
+    &:hover svg
+        fill: $neutrals2
+        +dark
+            fill: $neutrals8
+    &:not(:last-child)
+        margin-right: 24px

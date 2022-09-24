@@ -1,0 +1,85 @@
+@import ../../styles/helpers
+
+.nav
+    display: flex
+    justify-content: center
+    margin: 80px -16px 0
+    +d
+        margin: 80px -8px 0
+    +t
+        justify-content: flex-start
+        margin: 80px -40px 0
+        overflow: auto
+        overflow-x: auto 
+        -ms-overflow-style: none
+        scrollbar-width: none
+        -webkit-overflow-scrolling: touch
+        &::-webkit-scrollbar
+            display: none 
+        &:before,
+        &:after
+            content: ""
+            flex-shrink: 0
+            width: 40px
+            height: 1px
+    +m
+        margin-top: 48px
+
+.link
+    position: relative
+    display: flex
+    align-items: center
+    flex: 0 0 calc(25% - 32px)
+    width: calc(25% - 32px)
+    margin: 0 16px
+    padding-bottom: 26px
+    cursor: pointer
+    -webkit-tap-highlight-color: rgba(0,0,0,0)
+    +d
+        flex: 0 0 calc(25% - 16px)
+        width: calc(25% - 16px)
+        margin: 0 8px
+    +t
+        flex: 0 0 256px
+        width: 256px
+        margin: 0
+    &:after
+        content: ""
+        position: absolute
+        left: 0
+        right: 0
+        bottom: 0
+        height: 2px
+        border-radius: 2px
+        background: $neutrals2
+        opacity: 0
+        transition: opacity .2s
+        +dark
+            background: $neutrals8
+    &:hover,
+    &.active
+        &:after
+            opacity: 1
+    &:not(:last-child)
+        margin-right: 32px
+
+.avatar
+    flex-shrink: 48px
+    width: 48px
+    height: 48px
+    margin-right: 16px
+    background: $neutrals6
+    border-radius: 50%
+    overflow: hidden
+    img
+        width: 100%
+        height: 100%
+    
+.man
+    margin-bottom: 4px
+    +caption-1
+    font-weight: 600
+
+.position
+    +caption-1
+    color: $neutrals4
